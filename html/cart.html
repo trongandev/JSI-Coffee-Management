@@ -1,0 +1,306 @@
+<!doctype html>
+
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-error-container": "#93000a",
+                            "secondary-fixed": "#ffdcc6",
+                            outline: "#80756c",
+                            "tertiary-fixed-dim": "#e2c19b",
+                            "on-surface-variant": "#4e453d",
+                            "on-background": "#1b1d0e",
+                            "on-secondary-fixed": "#2d1604",
+                            "error-container": "#ffdad6",
+                            secondary: "#79573f",
+                            "surface-dim": "#dbdcc3",
+                            tertiary: "#332106",
+                            "tertiary-fixed": "#ffddb6",
+                            "on-tertiary-container": "#bd9f7a",
+                            "outline-variant": "#d2c4ba",
+                            surface: "#fbfbe2",
+                            "surface-tint": "#725a42",
+                            "primary-fixed-dim": "#e1c1a4",
+                            "on-primary-fixed-variant": "#59422c",
+                            "on-primary-container": "#bd9f83",
+                            "surface-container-highest": "#e4e4cc",
+                            "surface-container": "#efefd7",
+                            "surface-variant": "#e4e4cc",
+                            background: "#fbfbe2",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-high": "#eaead1",
+                            "surface-container-low": "#f5f5dc",
+                            "secondary-fixed-dim": "#eabda0",
+                            "primary-fixed": "#fedcbe",
+                            "surface-bright": "#fbfbe2",
+                            "inverse-on-surface": "#f2f2d9",
+                            "secondary-container": "#ffd1b3",
+                            "inverse-surface": "#303221",
+                            "on-secondary": "#ffffff",
+                            "on-surface": "#1b1d0e",
+                            "surface-container-lowest": "#ffffff",
+                            error: "#ba1a1a",
+                            "on-error": "#ffffff",
+                            "inverse-primary": "#e1c1a4",
+                            "on-secondary-container": "#7a5840",
+                            primary: "#33210d",
+                            "on-tertiary-fixed": "#291801",
+                            "on-primary": "#ffffff",
+                            "on-primary-fixed": "#291806",
+                            "primary-container": "#4b3621",
+                            "on-tertiary-fixed-variant": "#594325",
+                            "tertiary-container": "#4b361a",
+                            "on-secondary-fixed-variant": "#5f402a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "container-padding-desktop": "2.5rem",
+                            unit: "8px",
+                            "section-gap": "4rem",
+                            gutter: "1.5rem",
+                            "container-padding-mobile": "1.25rem",
+                        },
+                        fontFamily: {
+                            "headline-lg": ["Source Serif 4"],
+                            "headline-md": ["Source Serif 4"],
+                            "display-lg": ["Source Serif 4"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"],
+                            "headline-lg-mobile": ["Source Serif 4"],
+                            "label-md": ["Hanken Grotesk"],
+                            "label-sm": ["Hanken Grotesk"],
+                        },
+                        fontSize: {
+                            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .shadow-warm {
+                box-shadow: 0 4px 20px rgba(75, 54, 33, 0.06);
+            }
+            .checkout-card {
+                box-shadow: 0 12px 40px rgba(75, 54, 33, 0.12);
+            }
+        </style>
+    </head>
+    <body class="bg-background text-on-surface font-body-md min-h-screen flex flex-col">
+        <!-- TopNavBar -->
+        <header class="bg-surface shadow-[0_4px_20px_rgba(75,54,33,0.06)] sticky top-0 z-50">
+            <nav class="flex justify-between items-center w-full px-container-padding-desktop max-w-[1280px] mx-auto h-20">
+                <a href="../index.html" class="font-headline-md text-headline-md font-bold text-primary">Artisan Brew</a>
+                <div class="hidden md:flex items-center gap-gutter h-full">
+                    <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="../index.html">Home</a>
+                    <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="./shop.html">Shop</a>
+                    <a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md" href="./cart.html">Cart</a>
+                </div>
+                <div class="flex items-center gap-4">
+                    <a href="./cart.html" class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
+                        <span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+                    </a>
+                    <a href="./login.html" class="py-2 text-primary bg-surface-container rounded-lg px-4 transition-all duration-200 active:scale-95">Đăng nhập</a>
+                </div>
+            </nav>
+        </header>
+        <!-- Main Content Canvas -->
+        <main class="flex-grow w-full max-w-[1280px] mx-auto px-container-padding-mobile md:px-container-padding-desktop py-12">
+            <div class="flex flex-col lg:grid lg:grid-cols-12 gap-gutter">
+                <!-- Shopping Cart List -->
+                <div class="lg:col-span-8 space-y-6">
+                    <h1 class="font-headline-lg text-headline-lg text-primary mb-8">Your Brew Cart</h1>
+                    <!-- Cart Item 1 -->
+                    <div class="bg-surface shadow-warm rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 group transition-all duration-200 hover:-translate-y-0.5">
+                        <div class="w-full md:w-32 h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+                            <img
+                                class="w-full h-full object-cover"
+                                data-alt="A premium bag of artisanal dark roast coffee beans sitting on a rustic wooden table in a sunlit boutique cafe. The lighting is soft and warm, highlighting the matte finish of the packaging and the deep brown colors of the brand identity. The background shows a blurred high-end espresso machine."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFtMFvBKq3Dv2YbzU1r85dFfjP-q0o4i-vVM5Qx8rgCBT1tyToMOXPpX1CMZ_HNkMGTzOkIj0CH3-UZr3YKYrj_tIZJIDKWK7m7kZKhe10jpbaL5FvuscbrlCkSZjSvE2J3g9HsG7Wczm86EQ60nDwTRLQ-aAr2Su7LgprEVVQgSwZQrdaVVc8ftREBI552mETqHUBDOtSyORwoqEP_lJ6hm4stKRW6sImtJG4hwsrz1rtWAKGVARGq6Tef8elRAymAAFZvGM1biA"
+                            />
+                        </div>
+                        <div class="flex-grow w-full">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="font-headline-md text-headline-md text-primary">Ethiopian Yirgacheffe</h3>
+                                    <p class="text-on-surface-variant font-label-md">Light Roast • Whole Bean</p>
+                                </div>
+                                <button class="text-outline hover:text-error transition-colors p-1" title="Remove Item">
+                                    <span class="material-symbols-outlined" data-icon="delete">delete</span>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center mt-4">
+                                <div class="flex items-center bg-surface-container-low rounded-full px-2 border border-outline-variant/30">
+                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
+                                    </button>
+                                    <span class="px-4 font-bold text-on-surface">1</span>
+                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                                    </button>
+                                </div>
+                                <span class="font-headline-md text-headline-md text-secondary">$24.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Cart Item 2 -->
+                    <div class="bg-surface shadow-warm rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 group transition-all duration-200 hover:-translate-y-0.5">
+                        <div class="w-full md:w-32 h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
+                            <img
+                                class="w-full h-full object-cover"
+                                data-alt="A sleek minimalist glass jar filled with premium cold brew concentrate, showing a rich amber liquid. The scene is set in a modern kitchen with cream-colored marble countertops and soft, natural morning light. The overall aesthetic is clean, professional, and inviting, aligning with a luxury coffee brand."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHoH2Eu80AabzW7u6QaoSUE-sS-Vmpe_u3tJYRxgmGqndwjOeWxbTXmLznwM98V5rm4MyP7nyi0o2DiSkiwBvgSKvbNW2s8oA_I7BPZT6O-o5W5ynlIP3TilmShdwJ8i8qYXOksFoM-783HU03cKfyNHvbtk2XB5jf8cr1KF1qRJr5-0F6OqoFSw2mkIygL-IttQ3rKNuIbArxGZ4ueZBwV20pZ8eKL-jnZLSBi4ScSlrRXT6ADHPwRma5LlARKf-a_90kFxx95FI"
+                            />
+                        </div>
+                        <div class="flex-grow w-full">
+                            <div class="flex justify-between items-start mb-2">
+                                <div>
+                                    <h3 class="font-headline-md text-headline-md text-primary">Midnight Blend Cold Brew</h3>
+                                    <p class="text-on-surface-variant font-label-md">Concentrate • 32 fl oz</p>
+                                </div>
+                                <button class="text-outline hover:text-error transition-colors p-1" title="Remove Item">
+                                    <span class="material-symbols-outlined" data-icon="delete">delete</span>
+                                </button>
+                            </div>
+                            <div class="flex justify-between items-center mt-4">
+                                <div class="flex items-center bg-surface-container-low rounded-full px-2 border border-outline-variant/30">
+                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
+                                    </button>
+                                    <span class="px-4 font-bold text-on-surface">2</span>
+                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
+                                        <span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+                                    </button>
+                                </div>
+                                <span class="font-headline-md text-headline-md text-secondary">$36.00</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Empty State Suggestion (Micro-interaction) -->
+                    <div class="mt-12 p-8 border-2 border-dashed border-outline-variant/30 rounded-xl flex flex-col items-center text-center">
+                        <span class="material-symbols-outlined text-4xl text-outline mb-4" data-icon="auto_awesome">auto_awesome</span>
+                        <h4 class="font-headline-md text-primary">Feeling adventurous?</h4>
+                        <p class="text-on-surface-variant max-w-md mx-auto mt-2 font-body-md">
+                            Our Master Roaster just released a seasonal Colombian Micro-lot. Add it to your order to qualify for free shipping.
+                        </p>
+                        <button class="mt-6 px-6 py-2 border-2 border-secondary text-secondary rounded-full font-label-md hover:bg-secondary-container transition-colors">Browse New Arrivals</button>
+                    </div>
+                </div>
+                <!-- Order Summary Sidebar -->
+                <div class="lg:col-span-4 mt-12 lg:mt-0">
+                    <div class="bg-surface-container checkout-card rounded-xl p-8 sticky top-28 border border-outline-variant/20">
+                        <h2 class="font-headline-md text-headline-md text-primary mb-6">Order Summary</h2>
+                        <div class="space-y-4 mb-8">
+                            <div class="flex justify-between items-center">
+                                <span class="text-on-surface-variant font-body-md">Subtotal (3 items)</span>
+                                <span class="font-bold text-on-surface">$60.00</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-on-surface-variant font-body-md">Shipping</span>
+                                <span class="font-bold text-on-surface">$5.50</span>
+                            </div>
+                            <div class="flex justify-between items-center">
+                                <span class="text-on-surface-variant font-body-md">Taxes (Estimated)</span>
+                                <span class="font-bold text-on-surface">$4.80</span>
+                            </div>
+                            <div class="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
+                                <span class="font-headline-md text-primary">Total</span>
+                                <span class="font-headline-md text-secondary">$70.30</span>
+                            </div>
+                        </div>
+                        <!-- Promo Code -->
+                        <div class="mb-8">
+                            <label class="block text-label-sm uppercase tracking-wider text-outline mb-2">Promo Code</label>
+                            <div class="flex gap-2">
+                                <input
+                                    class="flex-grow bg-surface-container-low border border-outline-variant rounded-lg px-4 py-2 focus:ring-2 focus:ring-secondary focus:border-secondary outline-none transition-all"
+                                    placeholder="BREW2024"
+                                    type="text"
+                                />
+                                <button class="px-4 py-2 bg-secondary text-white rounded-lg font-label-md hover:opacity-90 transition-opacity">Apply</button>
+                            </div>
+                        </div>
+                        <button
+                            class="w-full bg-primary text-surface py-4 rounded-lg font-headline-md flex items-center justify-center gap-2 hover:opacity-95 transition-all shadow-lg active:scale-[0.98]"
+                        >
+                            Checkout
+                            <span class="material-symbols-outlined" data-icon="arrow_forward">arrow_forward</span>
+                        </button>
+                        <div class="mt-6 flex items-center justify-center gap-4 opacity-50">
+                            <span class="material-symbols-outlined text-[32px]" data-icon="credit_card">credit_card</span>
+                            <span class="material-symbols-outlined text-[32px]" data-icon="payments">payments</span>
+                            <span class="material-symbols-outlined text-[32px]" data-icon="account_balance_wallet">account_balance_wallet</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-section-gap px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-highest">
+            <div class="flex flex-col items-center md:items-start gap-2">
+                <div class="font-headline-md text-headline-md text-primary">Artisan Brew</div>
+                <p class="text-on-surface-variant font-label-sm text-label-sm max-w-xs text-center md:text-left">© 2024 Artisan Brew Co. Crafted with Warm Professionalism.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-8">
+                <a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">Privacy Policy</a>
+                <a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">Terms of Service</a>
+                <a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">Contact Us</a>
+                <a class="text-on-surface-variant hover:text-primary transition-opacity font-body-md text-body-md" href="#">Locations</a>
+            </div>
+            <div class="flex gap-4">
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined" data-icon="share">share</span>
+                </button>
+                <button class="w-10 h-10 rounded-full bg-surface flex items-center justify-center text-primary hover:bg-secondary-container transition-colors">
+                    <span class="material-symbols-outlined" data-icon="mail">mail</span>
+                </button>
+            </div>
+        </footer>
+        <script>
+            // Simple quantity adjustment simulation
+            document.querySelectorAll("button").forEach((btn) => {
+                btn.addEventListener("click", function (e) {
+                    const icon = this.querySelector(".material-symbols-outlined");
+                    if (icon) {
+                        const action = icon.getAttribute("data-icon");
+                        if (action === "add" || action === "remove") {
+                            const countSpan = this.parentElement.querySelector("span");
+                            let current = parseInt(countSpan.innerText);
+                            if (action === "add") countSpan.innerText = current + 1;
+                            if (action === "remove" && current > 1) countSpan.innerText = current - 1;
+                        }
+                    }
+                });
+            });
+        </script>
+    </body>
+</html>

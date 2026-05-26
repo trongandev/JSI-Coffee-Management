@@ -1,0 +1,230 @@
+<!doctype html>
+
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Artisan Brew - Sign In</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-error-container": "#93000a",
+                            "secondary-fixed": "#ffdcc6",
+                            outline: "#80756c",
+                            "tertiary-fixed-dim": "#e2c19b",
+                            "on-surface-variant": "#4e453d",
+                            "on-background": "#1b1d0e",
+                            "on-secondary-fixed": "#2d1604",
+                            "error-container": "#ffdad6",
+                            secondary: "#79573f",
+                            "surface-dim": "#dbdcc3",
+                            tertiary: "#332106",
+                            "tertiary-fixed": "#ffddb6",
+                            "on-tertiary-container": "#bd9f7a",
+                            "outline-variant": "#d2c4ba",
+                            surface: "#fbfbe2",
+                            "surface-tint": "#725a42",
+                            "primary-fixed-dim": "#e1c1a4",
+                            "on-primary-fixed-variant": "#59422c",
+                            "on-primary-container": "#bd9f83",
+                            "surface-container-highest": "#e4e4cc",
+                            "surface-container": "#efefd7",
+                            "surface-variant": "#e4e4cc",
+                            background: "#fbfbe2",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-high": "#eaead1",
+                            "surface-container-low": "#f5f5dc",
+                            "secondary-fixed-dim": "#eabda0",
+                            "primary-fixed": "#fedcbe",
+                            "surface-bright": "#fbfbe2",
+                            "inverse-on-surface": "#f2f2d9",
+                            "secondary-container": "#ffd1b3",
+                            "inverse-surface": "#303221",
+                            "on-secondary": "#ffffff",
+                            "on-surface": "#1b1d0e",
+                            "surface-container-lowest": "#ffffff",
+                            error: "#ba1a1a",
+                            "on-error": "#ffffff",
+                            "inverse-primary": "#e1c1a4",
+                            "on-secondary-container": "#7a5840",
+                            primary: "#33210d",
+                            "on-tertiary-fixed": "#291801",
+                            "on-primary": "#ffffff",
+                            "on-primary-fixed": "#291806",
+                            "primary-container": "#4b3621",
+                            "on-tertiary-fixed-variant": "#594325",
+                            "tertiary-container": "#4b361a",
+                            "on-secondary-fixed-variant": "#5f402a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "container-padding-desktop": "2.5rem",
+                            unit: "8px",
+                            "section-gap": "4rem",
+                            gutter: "1.5rem",
+                            "container-padding-mobile": "1.25rem",
+                        },
+                        fontFamily: {
+                            "headline-lg": ["Source Serif 4"],
+                            "headline-md": ["Source Serif 4"],
+                            "display-lg": ["Source Serif 4"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"],
+                            "headline-lg-mobile": ["Source Serif 4"],
+                            "label-md": ["Hanken Grotesk"],
+                            "label-sm": ["Hanken Grotesk"],
+                        },
+                        fontSize: {
+                            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            .form-input-glow:focus {
+                box-shadow: 0 0 0 4px rgba(121, 87, 63, 0.1);
+            }
+            .glass-effect {
+                backdrop-filter: blur(12px);
+                background: rgba(251, 251, 226, 0.85);
+            }
+        </style>
+    </head>
+    <body class="bg-surface text-on-surface font-body-md min-h-screen flex flex-col">
+        <!-- Main Content Area -->
+        <main class="flex-grow flex items-stretch overflow-hidden">
+            <!-- Left Side: Atmospheric Imagery (Asymmetric Layout) -->
+            <section class="hidden lg:flex flex-col justify-center relative w-1/2 p-12 overflow-hidden bg-primary-container">
+                <div class="absolute inset-0 opacity-40 mix-blend-overlay">
+                    <img
+                        alt="Artisan Coffee Craft"
+                        class="w-full h-full object-cover"
+                        data-alt="A cinematic, warm-toned close-up of a professional barista pouring steamed oat milk into a rich espresso to create intricate latte art. The lighting is soft and atmospheric, highlighting the steam and the textures of the dark wood coffee bar. The aesthetic is sophisticated and artisanal, utilizing deep browns and creamy whites to evoke a sense of premium craftsmanship and cozy morning light."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuDPWe1KiFN-TY094n-QuNHSco-5tiEtZAxlEDX8XJmOghJ3di5f1kWytLFV3w0Sr4LuehN4ZZ_yiCuycXMT0YuhKTOXWYh9mVsCVrBZL1jQDC1uVrlZtU6H0T08XBQtDOw-CpX0Fu1RuED-xhBaGnnrssUcva7WfrlS5k2DiNXNsim1jQ9IrEBOSDpHyCINTa4d1cuWsRYbqrhdMqdffmC1L8hkpIKzsbHU6akVQKsLaYVfxRHQAR8sxe77_fzCU73dWtIdpKFi-nM"
+                    />
+                </div>
+                <div class="relative z-10 max-w-lg">
+                    <h1 class="font-display-lg text-display-lg text-primary-fixed mb-6">A Craft Perfected in Every Bean.</h1>
+                    <p class="font-body-lg text-body-lg text-on-primary-container leading-relaxed mb-8">
+                        Step into the digital extension of our roasting room. Manage your subscriptions, discover rare origins, and track your daily ritual with precision.
+                    </p>
+                    <div class="flex gap-4 items-center">
+                        <div class="w-12 h-0.5 bg-secondary"></div>
+                        <span class="font-label-md text-label-md text-secondary-fixed tracking-widest uppercase">Since 1994</span>
+                    </div>
+                </div>
+                <!-- Floating Bento Element for Texture -->
+                <div class="absolute bottom-12 right-12 glass-effect p-6 rounded-xl shadow-lg border border-outline-variant/20 max-w-xs animate-bounce-slow">
+                    <div class="flex items-center gap-4 mb-3">
+                        <span class="material-symbols-outlined text-secondary" style="font-variation-settings: &quot;FILL&quot; 1">star</span>
+                        <span class="font-label-sm text-label-sm text-primary">CHEF'S SELECTION</span>
+                    </div>
+                    <p class="font-body-md text-body-md text-on-surface-variant italic">"The Ethiopean Yirgacheffe this season is unparalleled in its floral clarity."</p>
+                </div>
+            </section>
+            <!-- Right Side: Interaction Area -->
+            <section class="w-full lg:w-1/2 flex items-center justify-center p-container-padding-mobile md:p-container-padding-desktop bg-surface">
+                <div class="w-full max-w-md" id="auth-container">
+                    <!-- Toggle Switches -->
+                    <div class="flex gap-8 mb-12 border-b border-outline-variant/30">
+                        <a href="./login.html" class="pb-4 font-headline-md text-headline-md transition-all duration-300 text-on-surface-variant hover:text-primary" id="login-toggle">Sign In</a>
+                        <a href="./register.html" class="pb-4 font-headline-md text-headline-md transition-all duration-300 text-primary border-b-2 border-primary" id="signup-toggle">Join Us</a>
+                    </div>
+
+                    <!-- Signup Form (Hidden by Default) -->
+                    <div class="space-y-8" id="signup-view">
+                        <div class="space-y-2">
+                            <h2 class="font-headline-lg text-headline-lg text-primary">Create Your Account</h2>
+                            <p class="font-body-md text-body-md text-on-surface-variant">Join the Artisan Brew community today.</p>
+                        </div>
+                        <form class="space-y-4" onsubmit="event.preventDefault()">
+                            <div class="space-y-1">
+                                <label class="font-label-md text-label-md text-on-surface-variant block">FULL NAME</label
+                                ><input
+                                    class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
+                                    placeholder="Julian Brewster"
+                                    type="text"
+                                />
+                            </div>
+                            <div class="space-y-1">
+                                <label class="font-label-md text-label-md text-on-surface-variant block">EMAIL ADDRESS</label
+                                ><input
+                                    class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
+                                    placeholder="hello@artisanbrew.com"
+                                    type="email"
+                                />
+                            </div>
+                            <div class="space-y-1">
+                                <label class="font-label-md text-label-md text-on-surface-variant block">PASSWORD</label
+                                ><input
+                                    class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
+                                    placeholder="••••••••"
+                                    type="password"
+                                />
+                            </div>
+                            <div class="space-y-1">
+                                <label class="font-label-md text-label-md text-on-surface-variant block">CONFIRM PASSWORD</label
+                                ><input
+                                    class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
+                                    placeholder="••••••••"
+                                    type="password"
+                                />
+                            </div>
+                            <button
+                                class="w-full h-14 bg-primary text-surface font-label-md text-label-md rounded-lg hover:opacity-90 active:scale-[0.98] transition-all flex items-center justify-center gap-2"
+                            >
+                                CREATE ACCOUNT<span class="material-symbols-outlined text-sm">arrow_forward</span>
+                            </button>
+                        </form>
+                        <div class="relative flex items-center py-2">
+                            <div class="flex-grow border-t border-outline-variant/30"></div>
+                            <span class="flex-shrink mx-4 font-label-sm text-label-sm text-outline">OR CONTINUE WITH</span>
+                            <div class="flex-grow border-t border-outline-variant/30"></div>
+                        </div>
+                        <div class="grid grid-cols-2 gap-4">
+                            <button
+                                class="flex items-center justify-center gap-3 h-12 rounded-lg border border-outline-variant/50 hover:bg-surface-container-low transition-colors active:scale-[0.98]"
+                            >
+                                <img alt="Google" class="w-10 opacity-80" src="https://s3-alpha.figma.com/hub/file/2729744958/2a5758d6-4edb-4047-87bb-e6b94dbbbab0-cover.png" />
+                                <span class="font-label-md text-label-md">Google</span>
+                            </button>
+                            <button
+                                class="flex items-center justify-center gap-3 h-12 rounded-lg border border-outline-variant/50 hover:bg-surface-container-low transition-colors active:scale-[0.98]"
+                            >
+                                <img src="https://upload.wikimedia.org/wikipedia/commons/f/fa/Apple_logo_black.svg" alt="" class="w-4 mr-3" />
+                                <span class="font-label-md text-label-md">Apple</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+    </body>
+</html>

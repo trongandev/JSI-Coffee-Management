@@ -1,0 +1,401 @@
+<!doctype html>
+
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Artisan Brew | Crafted Coffee Excellence</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:wght@600;700&amp;family=Hanken+Grotesk:wght@400;500;600&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-error-container": "#93000a",
+                            "secondary-fixed": "#ffdcc6",
+                            outline: "#80756c",
+                            "tertiary-fixed-dim": "#e2c19b",
+                            "on-surface-variant": "#4e453d",
+                            "on-background": "#1b1d0e",
+                            "on-secondary-fixed": "#2d1604",
+                            "error-container": "#ffdad6",
+                            secondary: "#79573f",
+                            "surface-dim": "#dbdcc3",
+                            tertiary: "#332106",
+                            "tertiary-fixed": "#ffddb6",
+                            "on-tertiary-container": "#bd9f7a",
+                            "outline-variant": "#d2c4ba",
+                            surface: "#fbfbe2",
+                            "surface-tint": "#725a42",
+                            "primary-fixed-dim": "#e1c1a4",
+                            "on-primary-fixed-variant": "#59422c",
+                            "on-primary-container": "#bd9f83",
+                            "surface-container-highest": "#e4e4cc",
+                            "surface-container": "#efefd7",
+                            "surface-variant": "#e4e4cc",
+                            background: "#fbfbe2",
+                            "on-tertiary": "#ffffff",
+                            "surface-container-high": "#eaead1",
+                            "surface-container-low": "#f5f5dc",
+                            "secondary-fixed-dim": "#eabda0",
+                            "primary-fixed": "#fedcbe",
+                            "surface-bright": "#fbfbe2",
+                            "inverse-on-surface": "#f2f2d9",
+                            "secondary-container": "#ffd1b3",
+                            "inverse-surface": "#303221",
+                            "on-secondary": "#ffffff",
+                            "on-surface": "#1b1d0e",
+                            "surface-container-lowest": "#ffffff",
+                            error: "#ba1a1a",
+                            "on-error": "#ffffff",
+                            "inverse-primary": "#e1c1a4",
+                            "on-secondary-container": "#7a5840",
+                            primary: "#33210d",
+                            "on-tertiary-fixed": "#291801",
+                            "on-primary": "#ffffff",
+                            "on-primary-fixed": "#291806",
+                            "primary-container": "#4b3621",
+                            "on-tertiary-fixed-variant": "#594325",
+                            "tertiary-container": "#4b361a",
+                            "on-secondary-fixed-variant": "#5f402a",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "container-padding-desktop": "2.5rem",
+                            unit: "8px",
+                            "section-gap": "4rem",
+                            gutter: "1.5rem",
+                            "container-padding-mobile": "1.25rem",
+                        },
+                        fontFamily: {
+                            "headline-lg": ["Source Serif 4"],
+                            "headline-md": ["Source Serif 4"],
+                            "display-lg": ["Source Serif 4"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"],
+                            "headline-lg-mobile": ["Source Serif 4"],
+                            "label-md": ["Hanken Grotesk"],
+                            "label-sm": ["Hanken Grotesk"],
+                        },
+                        fontSize: {
+                            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            body {
+                background-color: #fbfbe2; /* Matches surface color */
+            }
+            .hero-gradient {
+                background: linear-gradient(to right, rgba(27, 29, 14, 0.7) 0%, rgba(27, 29, 14, 0.3) 100%);
+            }
+            .active-nav-link {
+                text-decoration: none;
+            }
+        </style>
+    </head>
+    <body class="font-body-md text-on-surface">
+        <!-- TopNavBar -->
+        <header class="fixed top-0 left-0 w-full z-50 bg-surface shadow-[0_4px_20px_rgba(75,54,33,0.06)] h-20">
+            <nav class="flex justify-between items-center w-full px-container-padding-desktop max-w-[1280px] mx-auto h-full">
+                <a href="./index.html" class="font-headline-md text-headline-md font-bold text-primary">Artisan Brew</a>
+                <div class="hidden md:flex gap-gutter items-center">
+                    <a class="font-body-md text-body-md text-secondary font-bold border-b-2 border-secondary pb-1" href="./index.html">Home</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="./html/shop.html">Shop</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="./html/cart.html">Cart</a>
+                    <a class="font-body-md text-body-md text-on-surface-variant hover:text-secondary transition-colors" href="./html/dashboard.html">Dashboard</a>
+                </div>
+                <div class="flex items-center gap-gutter">
+                    <a href="./html/cart.html" class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
+                        <span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+                    </a>
+                    <a href="./html/login.html" class="py-2 text-primary bg-surface-container rounded-lg px-4 transition-all duration-200 active:scale-95">Đăng nhập</a>
+                </div>
+            </nav>
+        </header>
+        <main>
+            <!-- Hero Section -->
+            <section class="relative h-screen flex items-center overflow-hidden">
+                <div class="absolute inset-0 z-0">
+                    <img
+                        alt="Artisan Coffee Experience"
+                        class="w-full h-full object-cover"
+                        data-alt="A cinematic, high-angle shot of a steaming cup of artisan coffee with perfect latte art, sitting on a weathered wooden table in a sun-drenched cafe. The lighting is warm and golden, casting soft shadows that highlight the rich brown textures of the coffee and the rustic grain of the wood. The atmosphere is peaceful and premium, reflecting a high-end minimalist boutique aesthetic with cream and deep espresso tones."
+                        src="https://lh3.googleusercontent.com/aida-public/AB6AXuBgEInK_SsOrZyUlXLDLXfqvcFoIT2eGb1he7qijFP5ZkaMye-aP5UeV44K_AlveLc-1FQGaU3B_BEANwgargYS2N_ulEJGf8qVQ8cZXsOR7EpHEw1jJw2EryXC1sqOa0NfxB0fMiQqEQzyjsNaBXXE1r06Bx0Gx2vf9cH5wwAIE4WAZJJk-KNWXQXpT9sEpoLcP9zuZyVKOsVdwuLfMqYtwFfc65Qo4iSbmeufriWUZfgC49s-pKP3az5OzlyOIkhlTuCllCyrvr8"
+                    />
+                    <div class="absolute inset-0 hero-gradient"></div>
+                </div>
+                <div class="relative z-10 px-container-padding-desktop max-w-[1280px] mx-auto w-full">
+                    <div class="max-w-2xl">
+                        <h1 class="font-display-lg text-display-lg text-white mb-4 animate-fade-in">Precision Roasting,<br />Artisan Soul.</h1>
+                        <p class="font-body-lg text-body-lg text-white/90 mb-8 max-w-lg">
+                            Experience the meticulous craft of small-batch roasting. From high-altitude Arabica to bold Robusta blends, we bring the world's finest beans to your cup.
+                        </p>
+                        <div class="flex gap-4">
+                            <button class="px-8 py-4 bg-primary text-surface font-label-md text-label-md rounded-lg hover:opacity-90 active:scale-95 transition-all">Shop The Collection</button>
+                            <button class="px-8 py-4 border-2 border-white text-white font-label-md text-label-md rounded-lg hover:bg-white/10 active:scale-95 transition-all">Our Story</button>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Categories & Featured Products Grid -->
+            <section class="py-section-gap px-container-padding-desktop max-w-[1280px] mx-auto">
+                <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-gutter">
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-2">Featured Selections</h2>
+                        <p class="font-body-md text-body-md text-on-surface-variant">Curated origins for the discerning palate.</p>
+                    </div>
+                    <div class="flex gap-2">
+                        <button class="px-6 py-2 rounded-full bg-secondary-container text-on-secondary-container font-label-md text-label-md transition-all">All</button>
+                        <button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+                            Arabica
+                        </button>
+                        <button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+                            Robusta
+                        </button>
+                        <button class="px-6 py-2 rounded-full border border-outline-variant text-on-surface-variant font-label-md text-label-md hover:bg-surface-container transition-all">
+                            Blends
+                        </button>
+                    </div>
+                </div>
+                <!-- Bento-style Grid -->
+                <div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+                    <!-- Product Card 1 (Large) -->
+                    <div class="md:col-span-8 group bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 h-64 md:h-auto overflow-hidden">
+                                <img
+                                    alt="Ethiopian Arabica"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="A close-up shot of raw and roasted coffee beans scattered artistically around a minimalist burlap sack. The lighting is soft and focused, emphasizing the glossy texture of the roasted Ethiopian Arabica beans. The background is a clean, creamy off-white, maintaining a professional yet organic and tactile visual style consistent with a premium coffee brand."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA2cWd7PGzX6Uv60_pASiFU0bVhb4AZBsGvTS8MfR1dcSoV23LI8lZUA3CaTjdJLq3M0VbdB4FTS_KthsutzdlR5m7FI10Y5o5kdwCK80rrbn4zbR0a-G4wlwaJLAd9eBOguQt_Ygc55cs_PQ7FmfL78fB1SWCXnwfQ-m_TyJHWZ7zAN2UXI4caPNmVU4SJZBsfoyO327zCvZ2Va3yC1BNKMIVpk1W2Sx33ji0QmM05YW9xA2PZA366pURghr86MNX-bZo45uC4aLc"
+                                />
+                            </div>
+                            <div class="md:w-1/2 p-8 flex flex-col justify-center">
+                                <span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-2">Arabica Specialist</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-4">Ethiopian Yirgacheffe</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-6 leading-relaxed">
+                                    Floral notes with a citrus finish. A light-roast masterpiece for enthusiasts of clarity and complexity.
+                                </p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="text-primary font-bold text-headline-md">$24.00</span>
+                                    <button class="p-3 bg-secondary text-white rounded-full material-symbols-outlined active:scale-90 transition-transform">add_shopping_cart</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 2 -->
+                    <div
+                        class="md:col-span-4 group bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-transform duration-300 flex flex-col"
+                    >
+                        <div class="h-64 overflow-hidden">
+                            <img
+                                alt="Highland Robusta"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A stylish flat lay of a matte black bag of coffee beans next to a minimalist ceramic mug filled with dark espresso. The setting is a clean, modern kitchen counter with warm wood accents. The image uses a palette of deep browns, creams, and blacks, emphasizing high contrast and professional management of light and texture for a sophisticated coffee brand."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuA-GejcI-ERxbbLOZIwuL_Uzo2ypqRkrUBGsR3Bt793jhTXdz1JGulHwybc_w1GEigyDHOZHxkvOqWZaYZaTsK5LBXWHMckvOahEujkET-ZxyIBL--3x5ujXK9z2DywCfhqOiVeB41y8kUxxUudo60Et40Per86A70hhtMN8C-8a8d0XVm8P7EsOaXwiGeFVRwA6MFiDRJ_FEArQhdwVtc88LyHJVatR4cZr2kSOb7y1BBqWjIstarj_hTh0jkY6Ue4imll8Q6feYc"
+                            />
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2">Highland Dark</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-6">Bold, earthy, and exceptionally caffeinated.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-headline-md">$19.50</span>
+                                <button class="p-3 border-2 border-secondary text-secondary rounded-full material-symbols-outlined active:scale-90 transition-transform">add_shopping_cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 3 -->
+                    <div
+                        class="md:col-span-4 group bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-transform duration-300 flex flex-col"
+                    >
+                        <div class="h-64 overflow-hidden">
+                            <img
+                                alt="Artisan Blend"
+                                class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                data-alt="A warm, atmospheric image of a barista's hands carefully pouring roasted beans into a modern industrial grinder. Dust motes dance in shafts of golden morning light. The scene captures the tactile and artisanal quality of coffee preparation, with a focus on rich textures and a warm, inviting color palette of copper, wood, and dark roast coffee."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCrSshE3NdIomt4YU3f50pVvYI1ysiZsqU3Gahbs9ODSCHD9TQmJe_xsBAR3iRaxPVeBjFMqhuoQL9mfbOad3jkAh5B4dJMfFhuTNmRtBufRzPr-iJr-Zmnn0LV6Uirkhl3Lbc8mJ8QNZT_mrdKVDqjuXDnr3btNgMZMQgnYy23Jte2uXCzasQ20GYTJAfu4ELJm7L2xQAQSuzUig3IAIa_xvoGAjljeo0m36akq7yhTuH_dlY5ahndI1pSp1N0F_aD8XIrrB_X4Y0"
+                            />
+                        </div>
+                        <div class="p-6 flex flex-col flex-grow">
+                            <h3 class="font-headline-md text-headline-md text-primary mb-2">Morning Bloom</h3>
+                            <p class="font-body-md text-body-md text-on-surface-variant mb-6">The perfect balanced daily driver blend.</p>
+                            <div class="flex items-center justify-between mt-auto">
+                                <span class="text-primary font-bold text-headline-md">$21.00</span>
+                                <button class="p-3 border-2 border-secondary text-secondary rounded-full material-symbols-outlined active:scale-90 transition-transform">add_shopping_cart</button>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Product Card 4 -->
+                    <div class="md:col-span-8 group bg-surface-container-low rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-transform duration-300">
+                        <div class="flex flex-col md:flex-row h-full">
+                            <div class="md:w-1/2 p-8 flex flex-col justify-center order-2 md:order-1">
+                                <span class="text-secondary font-label-sm text-label-sm uppercase tracking-widest mb-2">Seasonal Limited</span>
+                                <h3 class="font-headline-md text-headline-md text-primary mb-4">Summer Reserve</h3>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-6">Notes of stone fruit and caramel. Harvested at peak ripeness for a unique vibrant profile.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="text-primary font-bold text-headline-md">$28.00</span>
+                                    <button class="px-6 py-2 bg-primary text-white rounded-lg font-label-md text-label-md active:scale-95 transition-transform">Buy Now</button>
+                                </div>
+                            </div>
+                            <div class="md:w-1/2 h-64 md:h-auto overflow-hidden order-1 md:order-2">
+                                <img
+                                    alt="Summer Coffee Beans"
+                                    class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700"
+                                    data-alt="A vibrant, sunny lifestyle photo of a cold-brew glass bottle with a minimalist label standing in front of a window. The light is bright and crisp, casting sharp, elegant shadows. In the background, a few coffee cherries are scattered on a white marble surface, creating a fresh, upscale, and airy atmosphere that emphasizes the quality of seasonal artisan coffee."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuC9OWRQ4ZQIWasfY_6B6UxPqx3Q7nQe-1M9bUgVULBKf5A4axoJ_CAP6tPUbpx5FHgZiQ_igZVRFJRyodmZ1-ci5IpWablHL_U372fKo0C1_t4zMgPvSiAcC4v_-SP_w5oy3TWT0VEoiKZMtXpi-hnV2NKvOUgcH7qzCR13V_1hkVauwGqgZM8OfE8MfXQrrNwSctTMJ3qPFoXkVQ18AH8-12ZUNAddBQYIk_psZZ90sm7ECTvXQonjL4VEFMcyMAicAYP6qbjaLMU"
+                                />
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Our Story Section -->
+            <section class="bg-surface-container py-section-gap">
+                <div class="px-container-padding-desktop max-w-[1280px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+                    <div class="relative">
+                        <div class="aspect-square rounded-2xl overflow-hidden shadow-xl">
+                            <img
+                                alt="Our Roasting Process"
+                                class="w-full h-full object-cover"
+                                data-alt="A high-precision, close-up photograph of a modern industrial coffee roaster in action. The polished chrome and dark metal surfaces reflect the warm glow of the internal roasting fire. The image captures the technical excellence and artisan craft of the roasting process, presented in a minimalist and clean aesthetic with sharp focus and deep, rich tonal ranges."
+                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuDBbVI0RQ9MBkJliKIytSwdPJr8rsLAbl-HXwSskNtpWbqjNq5d4uL0JtOgd3Ls-GFFeiMHfqCKNVtxCERImQWSA4s3xZ3eT6_zpR2cM-VYaHEC9KVsRLjrOi8GKFThvQf2yoKEc5qd6XH_2Z0Hm0wbr5LlvTgKDkNz2x11_FZ6S5WukvQaRnqmeDRNxMr5F5OhmMpIbFqbCzkhz7_eTJBfS-yG8t-SLJPadgaz9Qx01XVKQIFRvQgaXSWohVKDBtJHE3L33_cgynA"
+                            />
+                        </div>
+                        <div class="absolute -bottom-8 -right-8 bg-surface p-8 rounded-xl shadow-lg hidden lg:block border border-outline-variant/30">
+                            <p class="font-headline-md text-headline-md text-secondary italic">"From farm to cup,<br />every degree matters."</p>
+                            <p class="mt-4 font-label-sm text-label-sm text-on-surface-variant">— Master Roaster</p>
+                        </div>
+                    </div>
+                    <div>
+                        <h2 class="font-headline-lg text-headline-lg text-primary mb-6">Grown with Respect, Brewed with Precision</h2>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-6 leading-relaxed">
+                            At Artisan Brew Co., we believe that coffee is more than just a morning ritual—it's a dialogue between nature and science. Our journey began in a small workshop with a
+                            single vintage roaster and a simple mission: to honor the hard work of farmers by applying rigorous technical standards to every roast.
+                        </p>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant mb-8 leading-relaxed">
+                            We travel to origins, meeting directly with producers to ensure fair compensation and sustainable practices. Back in our lab, we profile every bean to unlock its inherent
+                            character, using precision instrumentation and a master's intuition.
+                        </p>
+                        <div class="grid grid-cols-3 gap-4">
+                            <div class="text-center p-4 bg-surface rounded-lg">
+                                <span class="block font-headline-md text-primary">12</span>
+                                <span class="text-label-sm text-on-surface-variant uppercase">Origins</span>
+                            </div>
+                            <div class="text-center p-4 bg-surface rounded-lg">
+                                <span class="block font-headline-md text-primary">100%</span>
+                                <span class="text-label-sm text-on-surface-variant uppercase">Organic</span>
+                            </div>
+                            <div class="text-center p-4 bg-surface rounded-lg">
+                                <span class="block font-headline-md text-primary">48h</span>
+                                <span class="text-label-sm text-on-surface-variant uppercase">Roast-to-Ship</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <!-- Newsletter / CTA -->
+            <section class="py-section-gap px-container-padding-desktop max-w-[1280px] mx-auto text-center">
+                <div class="bg-primary-container p-12 md:p-20 rounded-3xl relative overflow-hidden">
+                    <div class="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -mr-32 -mt-32"></div>
+                    <div class="absolute bottom-0 left-0 w-48 h-48 bg-white/5 rounded-full -ml-24 -mb-24"></div>
+                    <h2 class="font-display-lg text-white mb-6 relative z-10">Join the Brew Circle</h2>
+                    <p class="font-body-lg text-on-primary-container mb-10 max-w-xl mx-auto relative z-10">Subscribe for early access to limited micro-lots, brewing guides, and exclusive events.</p>
+                    <form class="flex flex-col md:flex-row gap-4 max-w-lg mx-auto relative z-10" onsubmit="event.preventDefault()">
+                        <input
+                            class="flex-grow px-6 py-4 rounded-lg bg-surface-container-lowest border-none focus:ring-2 focus:ring-secondary text-primary font-body-md"
+                            placeholder="Email Address"
+                            required=""
+                            type="email"
+                        />
+                        <button class="px-8 py-4 bg-secondary text-white rounded-lg font-label-md text-label-md hover:opacity-90 active:scale-95 transition-all">Subscribe</button>
+                    </form>
+                </div>
+            </section>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-section-gap px-container-padding-desktop bg-surface-container-highest flex flex-col md:flex-row justify-between items-center gap-gutter">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="font-headline-md text-headline-md text-primary">Artisan Brew</div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant max-w-xs text-center md:text-left">Elevating the coffee ritual through precision roasting and artisanal passion.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-gutter my-8 md:my-0">
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-opacity" href="#">Privacy Policy</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-opacity" href="#">Terms of Service</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-opacity" href="#">Contact Us</a>
+                <a class="font-label-sm text-label-sm text-on-surface-variant hover:text-primary transition-opacity" href="#">Locations</a>
+            </div>
+            <div class="flex flex-col items-center md:items-end gap-4">
+                <div class="flex gap-4">
+                    <a class="material-symbols-outlined text-primary hover:opacity-70" href="#">facebook</a>
+                    <a class="material-symbols-outlined text-primary hover:opacity-70" href="#">photo_camera</a>
+                    <a class="material-symbols-outlined text-primary hover:opacity-70" href="#">alternate_email</a>
+                </div>
+                <div class="font-body-md text-body-md text-on-surface-variant">© 2024 Artisan Brew Co. Crafted with Warm Professionalism.</div>
+            </div>
+        </footer>
+        <script>
+            // Micro-interaction: Nav shadow on scroll
+            window.addEventListener("scroll", () => {
+                const header = document.querySelector("header");
+                if (window.scrollY > 20) {
+                    header.classList.add("bg-surface/90", "backdrop-blur-md");
+                } else {
+                    header.classList.remove("bg-surface/90", "backdrop-blur-md");
+                }
+            });
+
+            // Simple Fade-in animation for hero
+            document.addEventListener("DOMContentLoaded", () => {
+                const observerOptions = {
+                    threshold: 0.1,
+                };
+                const observer = new IntersectionObserver((entries) => {
+                    entries.forEach((entry) => {
+                        if (entry.isIntersecting) {
+                            entry.target.classList.add("opacity-100", "translate-y-0");
+                            entry.target.classList.remove("opacity-0", "translate-y-8");
+                        }
+                    });
+                }, observerOptions);
+
+                document.querySelectorAll(".animate-fade-in").forEach((el) => {
+                    el.classList.add("transition-all", "duration-1000", "opacity-0", "translate-y-8");
+                    observer.observe(el);
+                });
+            });
+        </script>
+
+        <!-- Firebase SDK -->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="./firebase.config.js"></script>
+    </body>
+</html>

@@ -1,0 +1,406 @@
+<!doctype html>
+
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Shop | Artisan Brew</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;family=Hanken+Grotesk:ital,wght@0,100..900;1,100..900&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
+        <script id="tailwind-config">
+            tailwind.config = {
+                darkMode: "class",
+                theme: {
+                    extend: {
+                        colors: {
+                            "on-primary": "#ffffff",
+                            "secondary-fixed": "#ffdcc6",
+                            "on-secondary-fixed-variant": "#5f402a",
+                            "secondary-container": "#ffd1b3",
+                            "primary-fixed-dim": "#e1c1a4",
+                            "on-secondary-container": "#7a5840",
+                            "surface-dim": "#dbdcc3",
+                            "surface-container-low": "#f5f5dc",
+                            "on-tertiary": "#ffffff",
+                            "on-tertiary-container": "#bd9f7a",
+                            "inverse-on-surface": "#f2f2d9",
+                            "on-secondary": "#ffffff",
+                            "primary-fixed": "#fedcbe",
+                            "surface-container-high": "#eaead1",
+                            "on-tertiary-fixed-variant": "#594325",
+                            error: "#ba1a1a",
+                            "tertiary-fixed-dim": "#e2c19b",
+                            "surface-tint": "#725a42",
+                            "outline-variant": "#d2c4ba",
+                            "tertiary-fixed": "#ffddb6",
+                            "surface-variant": "#e4e4cc",
+                            "surface-container-lowest": "#ffffff",
+                            tertiary: "#332106",
+                            "on-primary-container": "#bd9f83",
+                            outline: "#80756c",
+                            "error-container": "#ffdad6",
+                            "on-surface": "#1b1d0e",
+                            "inverse-primary": "#e1c1a4",
+                            "tertiary-container": "#4b361a",
+                            surface: "#fbfbe2",
+                            "primary-container": "#4b3621",
+                            "secondary-fixed-dim": "#eabda0",
+                            secondary: "#79573f",
+                            "on-tertiary-fixed": "#291801",
+                            "on-error": "#ffffff",
+                            "surface-container-highest": "#e4e4cc",
+                            "surface-container": "#efefd7",
+                            "on-primary-fixed": "#291806",
+                            "on-error-container": "#93000a",
+                            background: "#fbfbe2",
+                            "on-primary-fixed-variant": "#59422c",
+                            "surface-bright": "#fbfbe2",
+                            "on-surface-variant": "#4e453d",
+                            "on-secondary-fixed": "#2d1604",
+                            "inverse-surface": "#303221",
+                            "on-background": "#1b1d0e",
+                            primary: "#33210d",
+                        },
+                        borderRadius: {
+                            DEFAULT: "0.25rem",
+                            lg: "0.5rem",
+                            xl: "0.75rem",
+                            full: "9999px",
+                        },
+                        spacing: {
+                            "container-padding-mobile": "1.25rem",
+                            unit: "8px",
+                            "section-gap": "4rem",
+                            gutter: "1.5rem",
+                            "container-padding-desktop": "2.5rem",
+                        },
+                        fontFamily: {
+                            "headline-lg-mobile": ["Source Serif 4"],
+                            "display-lg": ["Source Serif 4"],
+                            "label-sm": ["Hanken Grotesk"],
+                            "headline-lg": ["Source Serif 4"],
+                            "label-md": ["Hanken Grotesk"],
+                            "body-lg": ["Hanken Grotesk"],
+                            "body-md": ["Hanken Grotesk"],
+                            "headline-md": ["Source Serif 4"],
+                        },
+                        fontSize: {
+                            "headline-lg-mobile": ["28px", { lineHeight: "36px", fontWeight: "600" }],
+                            "display-lg": ["48px", { lineHeight: "56px", letterSpacing: "-0.02em", fontWeight: "700" }],
+                            "label-sm": ["12px", { lineHeight: "16px", fontWeight: "500" }],
+                            "headline-lg": ["32px", { lineHeight: "40px", fontWeight: "600" }],
+                            "label-md": ["14px", { lineHeight: "20px", letterSpacing: "0.05em", fontWeight: "600" }],
+                            "body-lg": ["18px", { lineHeight: "28px", fontWeight: "400" }],
+                            "body-md": ["16px", { lineHeight: "24px", fontWeight: "400" }],
+                            "headline-md": ["24px", { lineHeight: "32px", fontWeight: "600" }],
+                        },
+                    },
+                },
+            };
+        </script>
+        <style>
+            .material-symbols-outlined {
+                font-variation-settings:
+                    "FILL" 0,
+                    "wght" 400,
+                    "GRAD" 0,
+                    "opsz" 24;
+            }
+            body {
+                background-color: #fbfbe2;
+            }
+            .custom-scrollbar::-webkit-scrollbar {
+                width: 4px;
+            }
+            .custom-scrollbar::-webkit-scrollbar-track {
+                background: #efefd7;
+            }
+            .custom-scrollbar::-webkit-scrollbar-thumb {
+                background: #79573f;
+                border-radius: 10px;
+            }
+        </style>
+    </head>
+    <body class="font-body-md text-on-surface selection:bg-secondary-container selection:text-on-secondary-container">
+        <!-- TopNavBar -->
+        <nav class="sticky top-0 z-50 bg-surface shadow-[0_4px_20px_rgba(75,54,33,0.06)] h-20 flex items-center">
+            <div class="flex justify-between items-center w-full px-container-padding-desktop max-w-[1280px] mx-auto h-full">
+                <a href="../index.html" class="font-headline-md text-headline-md font-bold text-primary">Artisan Brew</a>
+                <div class="hidden md:flex items-center gap-gutter h-full">
+                    <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="../index.html">Home</a>
+                    <a class="text-secondary font-bold border-b-2 border-secondary pb-1 font-body-md" href="./shop.html">Shop</a>
+                    <a class="text-on-surface-variant hover:text-secondary transition-colors font-body-md" href="./cart.html">Cart</a>
+                </div>
+                <div class="flex items-center gap-gutter">
+                    <a href="./cart.html" class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
+                        <span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
+                    </a>
+                    <a href="./login.html" class="py-2 text-primary bg-surface-container rounded-lg px-4 transition-all duration-200 active:scale-95">Đăng nhập</a>
+                </div>
+            </div>
+        </nav>
+        <main class="max-w-[1280px] mx-auto px-container-padding-mobile md:px-container-padding-desktop pb-section-gap">
+            <!-- Hero Section -->
+            <section class="py-12 md:py-20 text-center">
+                <div class="max-w-2xl mx-auto">
+                    <h1 class="font-headline-lg text-headline-lg text-primary mb-4">Shop Our Collection</h1>
+                    <p class="font-body-lg text-body-lg text-on-surface-variant">Exceptional beans sourced with integrity, roasted for clarity, and delivered with the warmth of a morning sun.</p>
+                </div>
+            </section>
+            <div class="flex flex-col md:flex-row gap-gutter">
+                <!-- Sidebar Filter -->
+                <aside class="w-full md:w-64 flex-shrink-0">
+                    <div class="sticky top-28 bg-surface-container-low p-6 rounded-xl space-y-8 border border-outline-variant/30">
+                        <div>
+                            <h3 class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-4">Roast Level</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" type="checkbox" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Light Roast</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" type="checkbox" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Medium Roast</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input checked="" class="w-5 h-5 rounded border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" type="checkbox" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Dark Roast</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div>
+                            <h3 class="font-label-md text-label-md text-secondary uppercase tracking-wider mb-4">Region</h3>
+                            <div class="space-y-3">
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input class="w-5 h-5 border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" name="region" type="radio" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Africa</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input checked="" class="w-5 h-5 border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" name="region" type="radio" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Americas</span>
+                                </label>
+                                <label class="flex items-center gap-3 cursor-pointer group">
+                                    <input class="w-5 h-5 border-outline text-secondary focus:ring-secondary cursor-pointer bg-surface" name="region" type="radio" />
+                                    <span class="font-body-md text-on-surface group-hover:text-secondary transition-colors">Asia</span>
+                                </label>
+                            </div>
+                        </div>
+                        <div class="pt-4 border-t border-outline-variant/30">
+                            <button class="w-full py-2 bg-secondary text-on-primary rounded-lg font-label-md hover:bg-primary transition-all active:scale-95">Reset Filters</button>
+                        </div>
+                    </div>
+                </aside>
+                <!-- Product Grid -->
+                <div class="flex-grow">
+                    <div class="flex items-center justify-between mb-8">
+                        <span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-widest">Showing 8 Products</span>
+                        <div class="flex items-center gap-2">
+                            <span class="font-label-md text-label-md text-on-surface-variant">Sort:</span>
+                            <select class="bg-transparent border-none font-label-md text-primary focus:ring-0 cursor-pointer">
+                                <option>Featured</option>
+                                <option>Price: Low to High</option>
+                                <option>Price: High to Low</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-gutter">
+                        <!-- Card 1 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="A premium matte-finished coffee bag standing elegantly on a wooden counter of a sunlit boutique cafe. The packaging features minimalist artisanal typography and earthy brown tones, surrounded by scattered whole coffee beans. Warm, high-key natural lighting creates soft shadows, emphasizing a clean, professional light-mode aesthetic."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAe7j-sRypUAEuab4EWzGyJBzREIWusa6T8fr9BVp7dhaAm_2se2Y0UdAioUZmDuHLu44-mc7SgKMG_i3O18c-ZyRfoIOfqG375lM0_6tohXGYO-ou-BJoy9vK8nZZ6XEsbwEWmxqgDMZGMzC2FNxOICkd-KSm1TDUNwV12iuvMnUruuNQmEf87u5ZP62CGXRmFIfSK5L32FQ6eR_TsArMSuneu_4dOUyAnVYxQwCYoihU2YUF9lJmGrvlIVBoMGFVe3VhntsQUBTA"
+                                />
+                                <span class="absolute top-4 left-4 bg-primary-container text-on-primary-container px-3 py-1 rounded-full font-label-sm uppercase tracking-wide">Single Origin</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Ethiopian Yirgacheffe</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Light Roast • Africa</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Notes of jasmine, lemon zest, and wild honey with a silky finish.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$24.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 2 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Close-up of a high-end coffee bag with a textured paper finish, reflecting a warm artisanal craft aesthetic. The setting is a minimalist kitchen with marble surfaces and warm wooden accents. Soft ambient lighting highlights the rich brown tones of the design. The overall mood is sophisticated and inviting, typical of a professional gourmet brand."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCWWYZhwsqWXbwhNOmM0814QocTUsoipKtIlItEbSAxuKSSjo-NXX4ScLE2Q8PR9JLFN3huCbRfwDFbfFS1q2zRSFvS3vnFhT_vH1g1cAACFHCEpBZgpGC-1YOdlOYG5oMVRptY4xKA1ObilVga3FzGXlEdNdy2kntq7IMHpW2E2eB4Ob1ensCIr6WLh7m4Tx7pZwvzCi6DatKB0qi0epAqxJOgGuXLGw0qHpWwgJQYEiM2rmNorPsQCrwW5Me1IFWVJGXbTeqFUY4"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Guatemalan Huehue</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Medium Roast • Americas</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Chocolate fudge, red apple, and a toasted almond aroma.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$22.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 3 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="A professional product shot of coffee beans spilling out of a sleek, dark-colored artisan bag. The backdrop is a clean, off-white surface with a slight texture, creating a modern and minimalist feel. The lighting is warm and directional, casting gentle shadows that give the scene a tactile, three-dimensional quality. The color palette is rich in browns and creams."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuB-bnjW18ZSk6siOl4wD91L0eJkw-cgH6Z10T3BHStJsZxQ965tn5NoL4QJOwH4m7n4iIn4ScgiJWIn2gBz952iYIx3BROvg1pOfCgu-9rKYkAWXRXrlzGDl41oJI_X5a-1xuMQRejA9SlqsPGAVK4i1mV1WLd_BPApGBAwac1-ygviKYr7h4_kwWof1IlAL2zrNDof5EnHFVdZDD7SxBZ1tSK-MXuZ2xOPzBtxj_rX1FKAWUfTDkXp6kUSknRps2cb7lGLMqkY8U0"
+                                />
+                                <span class="absolute top-4 right-4 bg-error-container text-on-error-container px-3 py-1 rounded-full font-label-sm uppercase tracking-wide">Popular</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Sumatra Mandheling</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Dark Roast • Asia</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Earthy, full-bodied with hints of cedar and black pepper.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$26.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 4 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Artisanal coffee packaging presented on a textured cream surface. The bag has a minimalist design with bold serif headings and soft gold accents. The lighting is bright and cheerful, suggesting a morning coffee ritual in a high-end, contemporary living space. Warm browns and off-whites dominate the scene, maintaining a consistent professional aesthetic."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuAUOoomJtDLzOXbAk2fOQiVTkomyzgeFsetvVW-a4IBZ6PhUvWs4ImFPYeoHbx-rrl_BnmFWlekZyeaydb22DX9w-cI981p812_RjlFn_ueXvUm4noC1swNVZYFqZbPCn3iAivgMhQ6_mVAEwg8tuG-wRA28OQuEMo9xK1un-PUSiS7gLGvXPNiiHomi17Q8ECbdFaJlg2Qi3NIGhmUSbO-IFNZoWfyaA-RKoT3y7DTi88mHBPZtvdDkSmSQODfZByH47eRZ55saxI"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Midnight Ledger Blend</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Dark Roast • House Blend</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Our signature ledger-style brew. Dark molasses and smoke.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$20.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 5 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Close up of coffee bag textures. The paper is thick and organic with slight imperfections that evoke a handmade artisanal quality. The scene is lit with warm, diffused sunlight, highlighting the subtle brown and cream tones of the label. A minimalist and elegant aesthetic that speaks to the premium quality of the beans inside."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuA6AUtPhF2ZFEz-0Yd2MiYipxYavqbKZWa7kZyQHI0sDKyfjkmcNu7jXQ-l8kVoPR3BapvDNzF3DPLl9r9jNHzKsToAoITn_fbWDOlgLU5PIv66vcxjl1WwuARESiSshipHyAGNmwH4vPJrOpGyFdqnXy5qg_pBqzawuxViWPW0DLl8gyGpbZZMgBiydjyQQSvwvgQ3ISKqJRbgQ4i7Bult5cWdzwBbkVjT2ZY6i3c-fdQZwsMIA1kZUUpZ70-qRL9MaJC5oE3PCC8"
+                                />
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Costa Rica Tarrazú</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Medium Roast • Americas</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Notes of sweet citrus, maple syrup, and a bright, crisp finish.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$23.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- Card 6 -->
+                        <div class="group bg-surface-container-lowest rounded-xl overflow-hidden shadow-[0_4px_20px_rgba(75,54,33,0.06)] hover:-translate-y-1 transition-all duration-300">
+                            <div class="relative aspect-square overflow-hidden bg-surface-container">
+                                <img
+                                    class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110"
+                                    data-alt="Modern coffee bag design on a minimalist display shelf. The background is a soft, warm cream color that creates a sense of luxury and calm. The lighting is soft and ambient, emphasizing the clean lines and tactile quality of the coffee bag. The visual style is premium and artisanal, reflecting a high-end coffee shop experience."
+                                    src="https://lh3.googleusercontent.com/aida-public/AB6AXuCe0zl6J7Sfq4NyyDz61auIoL3hgU1vvoxdLMfHbV2jHNaE3j3tOg9J0_5qA8vrm4g24BJuYIW3BF3J9YuFbyN9781FXxTRRzdjjC6_IC-74ppgUk9ChwJSikrIIKzaM5F0hhuDJBnTdp5CPMmYNQbFls5RZZNQuWntk1kFnp-Rlu31pI8vBxDEqkOsTSRk1vQIWqWD6QhJKiTIWANbhvgVCznz_xpH7GjDi0sH-F6fLO1iCqcSZfsTrfTTpjfRuA877FIX01B6OL8"
+                                />
+                                <span class="absolute top-4 left-4 bg-tertiary text-on-tertiary px-3 py-1 rounded-full font-label-sm uppercase tracking-wide">Limited Release</span>
+                            </div>
+                            <div class="p-6">
+                                <h3 class="font-headline-md text-headline-md text-primary mb-1">Kenya AA Maseno</h3>
+                                <p class="font-label-sm text-label-sm text-secondary uppercase tracking-widest mb-3">Light Roast • Africa</p>
+                                <p class="font-body-md text-body-md text-on-surface-variant mb-4 line-clamp-2 italic">Complex acidity with blackcurrant and deep winey notes.</p>
+                                <div class="flex items-center justify-between mt-auto">
+                                    <span class="font-headline-md text-headline-md text-primary">$28.00</span>
+                                    <button class="bg-primary text-on-primary px-4 py-2 rounded-lg font-label-md hover:bg-secondary transition-colors active:scale-95 flex items-center gap-2">
+                                        <span class="material-symbols-outlined text-[20px]" data-icon="add_shopping_cart">add_shopping_cart</span>
+                                        Add
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="mt-section-gap flex items-center justify-center gap-4">
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-on-surface-variant transition-colors" data-icon="arrow_back_ios">
+                            arrow_back_ios
+                        </button>
+                        <div class="flex items-center gap-2">
+                            <button class="w-10 h-10 rounded-full bg-secondary text-on-primary font-label-md">1</button>
+                            <button class="w-10 h-10 rounded-full hover:bg-surface-container text-on-surface-variant font-label-md transition-colors">2</button>
+                            <button class="w-10 h-10 rounded-full hover:bg-surface-container text-on-surface-variant font-label-md transition-colors">3</button>
+                            <span class="px-2">...</span>
+                            <button class="w-10 h-10 rounded-full hover:bg-surface-container text-on-surface-variant font-label-md transition-colors">12</button>
+                        </div>
+                        <button class="material-symbols-outlined p-2 hover:bg-surface-container rounded-full text-on-surface-variant transition-colors" data-icon="arrow_forward_ios">
+                            arrow_forward_ios
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </main>
+        <!-- Footer -->
+        <footer class="w-full py-section-gap px-container-padding-desktop flex flex-col md:flex-row justify-between items-center gap-gutter bg-surface-container-highest">
+            <div class="flex flex-col items-center md:items-start gap-4">
+                <div class="font-headline-md text-headline-md text-primary">Artisan Brew Co.</div>
+                <p class="font-label-sm text-label-sm text-on-surface-variant">© 2024 Artisan Brew Co. Crafted with Warm Professionalism.</p>
+            </div>
+            <div class="flex flex-wrap justify-center gap-gutter">
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-opacity" href="#">Privacy Policy</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-opacity" href="#">Terms of Service</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-opacity" href="#">Contact Us</a>
+                <a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-opacity" href="#">Locations</a>
+            </div>
+            <div class="flex gap-4">
+                <button class="material-symbols-outlined p-2 hover:text-secondary text-on-surface-variant transition-colors" data-icon="public">public</button>
+                <button class="material-symbols-outlined p-2 hover:text-secondary text-on-surface-variant transition-colors" data-icon="alternate_email">alternate_email</button>
+            </div>
+        </footer>
+        <script>
+            // Micro-interactions for buttons
+            document.querySelectorAll("button").forEach((btn) => {
+                btn.addEventListener("click", function () {
+                    this.classList.add("scale-95");
+                    setTimeout(() => this.classList.remove("scale-95"), 100);
+                });
+            });
+
+            // Simple filtering logic simulation
+            const checkboxes = document.querySelectorAll('input[type="checkbox"]');
+            checkboxes.forEach((cb) => {
+                cb.addEventListener("change", () => {
+                    const grid = document.querySelector(".grid");
+                    grid.style.opacity = "0.5";
+                    setTimeout(() => {
+                        grid.style.opacity = "1";
+                    }, 300);
+                });
+            });
+        </script>
+    </body>
+</html>
