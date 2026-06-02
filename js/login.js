@@ -60,3 +60,38 @@ loginForm.addEventListener("submit", async (e) => {
             });
         });
 });
+
+// xử lý đăng nhập với Google
+const btnGoogle = document.getElementById("btn-google");
+
+btnGoogle.addEventListener("click", () => {
+    var provider = new firebase.auth.GoogleAuthProvider();
+
+    firebase
+        .auth()
+        .signInWithPopup(provider)
+        .then((result) => {
+            // Đăng nhập thành công với Google
+            var user = result.user;
+            console.log(user);
+            Swal.fire({
+                icon: "success",
+                title: "Login Successful",
+                text: "You have been logged in successfully.",
+                willClose: () => {
+                    window.location.href = "/index.html";
+                },
+            });
+        })
+        .catch((error) => {
+            // lỗi đăng nhập với Google, hiển thị thông báo lỗi
+            var errorCode = error.code;
+            var errorMessage = error.message;
+            console.error("Error during Google login:", errorCode, errorMessage);
+            Swal.fire({
+                icon: "error",
+                title: "Google Login Failed",
+                text: errorMessage,
+            });
+        });
+});
