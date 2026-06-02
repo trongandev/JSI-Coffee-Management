@@ -214,7 +214,7 @@
                         </div>
                     </div>
                     <!-- Right Column: Main Fields -->
-                    <div class="lg:col-span-2 space-y-gutter">
+                    <form id="form-add" class="lg:col-span-2 space-y-gutter">
                         <div class="bg-surface-container-lowest p-8 rounded-xl shadow-[0_4px_20px_rgba(75,54,33,0.06)] border border-outline-variant/10">
                             <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
                                 <!-- Product Name -->
@@ -223,42 +223,12 @@
                                     <input
                                         class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg"
                                         id="product_name"
+                                        name="name"
                                         placeholder="Ví dụ: Ethiopia Yirgacheffe G1"
                                         type="text"
                                     />
                                 </div>
-                                <!-- SKU -->
-                                <div>
-                                    <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="sku">Mã SKU</label>
-                                    <input
-                                        class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg"
-                                        id="sku"
-                                        placeholder="AB-ETH-001"
-                                        type="text"
-                                    />
-                                </div>
-                                <!-- Roast Level -->
-                                <div>
-                                    <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="roast_level">Mức độ rang (Roast Level)</label>
-                                    <select
-                                        class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg appearance-none"
-                                        id="roast_level"
-                                    >
-                                        <option value="light">Light Roast</option>
-                                        <option value="medium">Medium Roast</option>
-                                        <option value="dark">Dark Roast</option>
-                                    </select>
-                                </div>
-                                <!-- Region/Origin -->
-                                <div>
-                                    <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="region">Vùng/Nguồn gốc</label>
-                                    <input
-                                        class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg"
-                                        id="region"
-                                        placeholder="Yirgacheffe, Ethiopia"
-                                        type="text"
-                                    />
-                                </div>
+
                                 <!-- Price -->
                                 <div>
                                     <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="price">Giá bán (VNĐ)</label>
@@ -266,6 +236,7 @@
                                         <input
                                             class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 pl-4 pr-12 rounded-t-lg"
                                             id="price"
+                                            name="price"
                                             placeholder="250000"
                                             type="number"
                                         />
@@ -274,12 +245,13 @@
                                 </div>
                                 <!-- Stock Quantity -->
                                 <div>
-                                    <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="stock">Số lượng tồn kho</label>
+                                    <label class="block font-label-md text-label-md text-on-surface-variant mb-2" for="image">Link hình ảnh</label>
                                     <input
                                         class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg"
-                                        id="stock"
-                                        placeholder="100"
-                                        type="number"
+                                        id="image"
+                                        name="image"
+                                        placeholder="https://example.com/image.jpg"
+                                        type="text"
                                     />
                                 </div>
                                 <!-- Description -->
@@ -288,6 +260,7 @@
                                     <textarea
                                         class="w-full bg-surface-container/50 border-0 border-b-2 border-outline-variant/30 focus:border-secondary focus:ring-0 transition-all font-body-md text-body-md py-3 px-4 rounded-t-lg resize-none"
                                         id="description"
+                                        name="description"
                                         placeholder="Mô tả hương vị, độ acid, body và hậu vị của cà phê..."
                                         rows="5"
                                     ></textarea>
@@ -307,7 +280,7 @@
                                 Thêm sản phẩm
                             </button>
                         </div>
-                    </div>
+                    </form>
                 </div>
             </section>
             <!-- Footer Integration -->
@@ -340,5 +313,15 @@
                 btn.addEventListener("mouseleave", () => btn.classList.remove("opacity-80"));
             });
         </script>
+
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="../firebase.config.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script defer src="../js/add-product.js"></script>
     </body>
 </html>
