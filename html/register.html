@@ -164,13 +164,14 @@
                             <h2 class="font-headline-lg text-headline-lg text-primary">Create Your Account</h2>
                             <p class="font-body-md text-body-md text-on-surface-variant">Join the Artisan Brew community today.</p>
                         </div>
-                        <form class="space-y-4" onsubmit="event.preventDefault()">
+                        <form class="space-y-4" id="register-form">
                             <div class="space-y-1">
                                 <label class="font-label-md text-label-md text-on-surface-variant block">FULL NAME</label
                                 ><input
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="Julian Brewster"
                                     type="text"
+                                    name="fullName"
                                 />
                             </div>
                             <div class="space-y-1">
@@ -179,6 +180,7 @@
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="hello@artisanbrew.com"
                                     type="email"
+                                    name="email"
                                 />
                             </div>
                             <div class="space-y-1">
@@ -187,6 +189,7 @@
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="••••••••"
                                     type="password"
+                                    name="password"
                                 />
                             </div>
                             <div class="space-y-1">
@@ -195,6 +198,7 @@
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="••••••••"
                                     type="password"
+                                    name="confirmPassword"
                                 />
                             </div>
                             <button
@@ -226,5 +230,14 @@
                 </div>
             </section>
         </main>
+        <!-- Firebase SDK -->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="../firebase.config.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="../js/register.js"></script>
     </body>
 </html>

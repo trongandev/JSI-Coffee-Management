@@ -163,13 +163,14 @@
                             <h2 class="font-headline-lg text-headline-lg text-primary">Welcome Back</h2>
                             <p class="font-body-md text-body-md text-on-surface-variant">Your perfect cup is waiting for you.</p>
                         </div>
-                        <form class="space-y-6" onsubmit="event.preventDefault()">
+                        <form class="space-y-6" id="login-form">
                             <div class="space-y-1">
                                 <label class="font-label-md text-label-md text-on-surface-variant block">EMAIL ADDRESS</label>
                                 <input
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="hello@artisanbrew.com"
                                     type="email"
+                                    name="email"
                                 />
                             </div>
                             <div class="space-y-1">
@@ -181,6 +182,7 @@
                                     class="w-full h-14 px-4 rounded-lg bg-surface-container-low border-transparent focus:border-secondary focus:ring-0 text-on-surface font-body-md form-input-glow transition-all"
                                     placeholder="••••••••"
                                     type="password"
+                                    name="password"
                                 />
                             </div>
                             <button
@@ -213,5 +215,15 @@
                 </div>
             </section>
         </main>
+
+        <!-- Firebase SDK -->
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="../firebase.config.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="../js/login.js"></script>
     </body>
 </html>

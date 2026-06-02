@@ -134,7 +134,11 @@
                     <a href="./html/cart.html" class="p-2 rounded-full hover:bg-surface-container-low transition-all duration-200">
                         <span class="material-symbols-outlined text-primary" data-icon="shopping_cart">shopping_cart</span>
                     </a>
-                    <a href="./html/login.html" class="py-2 text-primary bg-surface-container rounded-lg px-4 transition-all duration-200 active:scale-95">Đăng nhập</a>
+                    <a href="./html/login.html" class="py-2 text-primary bg-surface-container rounded-lg px-4 transition-all duration-200 active:scale-95" id="btn-login">Đăng nhập</a>
+                    <a href="#" id="profile">
+                        <p>Xin chào <strong id="profile-name">N/A</strong></p>
+                        <img src="" alt="" id="profile-avatar" />
+                    </a>
                 </div>
             </nav>
         </header>
@@ -397,5 +401,8 @@
         <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
         <!-- Link config -->
         <script defer src="./firebase.config.js"></script>
+
+        <!-- kiểm tra đăng nhập -->
+        <script defer src="./js/check-login.js"></script>
     </body>
 </html>
