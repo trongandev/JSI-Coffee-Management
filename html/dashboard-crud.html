@@ -16,6 +16,7 @@
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
         <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet" />
         <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+
         <script id="tailwind-config">
             tailwind.config = {
                 darkMode: "class",
@@ -137,7 +138,7 @@
         <!-- SideNavBar Shell -->
         <aside class="flex flex-col p-gutter w-[280px] h-screen fixed overflow-y-auto bg-surface-container-low border-r border-outline-variant/30 left-0 top-0">
             <div class="mb-10 px-2">
-                <h1 class="font-headline-md text-headline-md font-semibold text-primary">Brew Manager</h1>
+                <a href="../index.html" class="font-headline-md text-headline-md font-semibold text-primary">Brew Manager</a>
                 <p class="font-label-sm text-label-sm text-on-surface-variant opacity-70">Precision Operations</p>
             </div>
             <nav class="flex-1 space-y-1">
@@ -242,14 +243,12 @@
                     <thead>
                         <tr class="bg-surface-container-lowest border-b border-outline-variant/30">
                             <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Product</th>
-                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">SKU</th>
-                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Roast</th>
-                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Stock</th>
-                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Price</th>
-                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">Actions</th>
+                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">PRICE</th>
+                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">DESC</th>
+                            <th class="px-6 py-4 font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">ACTIONS</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-outline-variant/20">
+                    <tbody class="divide-y divide-outline-variant/20" id="product-container">
                         <!-- Row 1 -->
                         <tr class="hover:bg-surface-container-low/50 transition-colors group">
                             <td class="px-6 py-4">
@@ -473,5 +472,15 @@
                 });
             });
         </script>
+
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="../firebase.config.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script defer src="../js/render-product.js"></script>
     </body>
 </html>

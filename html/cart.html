@@ -139,72 +139,8 @@
                 <!-- Shopping Cart List -->
                 <div class="lg:col-span-8 space-y-6">
                     <h1 class="font-headline-lg text-headline-lg text-primary mb-8">Your Brew Cart</h1>
-                    <!-- Cart Item 1 -->
-                    <div class="bg-surface shadow-warm rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 group transition-all duration-200 hover:-translate-y-0.5">
-                        <div class="w-full md:w-32 h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
-                            <img
-                                class="w-full h-full object-cover"
-                                data-alt="A premium bag of artisanal dark roast coffee beans sitting on a rustic wooden table in a sunlit boutique cafe. The lighting is soft and warm, highlighting the matte finish of the packaging and the deep brown colors of the brand identity. The background shows a blurred high-end espresso machine."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuCFtMFvBKq3Dv2YbzU1r85dFfjP-q0o4i-vVM5Qx8rgCBT1tyToMOXPpX1CMZ_HNkMGTzOkIj0CH3-UZr3YKYrj_tIZJIDKWK7m7kZKhe10jpbaL5FvuscbrlCkSZjSvE2J3g9HsG7Wczm86EQ60nDwTRLQ-aAr2Su7LgprEVVQgSwZQrdaVVc8ftREBI552mETqHUBDOtSyORwoqEP_lJ6hm4stKRW6sImtJG4hwsrz1rtWAKGVARGq6Tef8elRAymAAFZvGM1biA"
-                            />
-                        </div>
-                        <div class="flex-grow w-full">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <h3 class="font-headline-md text-headline-md text-primary">Ethiopian Yirgacheffe</h3>
-                                    <p class="text-on-surface-variant font-label-md">Light Roast • Whole Bean</p>
-                                </div>
-                                <button class="text-outline hover:text-error transition-colors p-1" title="Remove Item">
-                                    <span class="material-symbols-outlined" data-icon="delete">delete</span>
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center mt-4">
-                                <div class="flex items-center bg-surface-container-low rounded-full px-2 border border-outline-variant/30">
-                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
-                                        <span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
-                                    </button>
-                                    <span class="px-4 font-bold text-on-surface">1</span>
-                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
-                                        <span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
-                                    </button>
-                                </div>
-                                <span class="font-headline-md text-headline-md text-secondary">$24.00</span>
-                            </div>
-                        </div>
-                    </div>
-                    <!-- Cart Item 2 -->
-                    <div class="bg-surface shadow-warm rounded-lg p-4 md:p-6 flex flex-col md:flex-row items-center gap-6 group transition-all duration-200 hover:-translate-y-0.5">
-                        <div class="w-full md:w-32 h-32 flex-shrink-0 bg-surface-container rounded-lg overflow-hidden">
-                            <img
-                                class="w-full h-full object-cover"
-                                data-alt="A sleek minimalist glass jar filled with premium cold brew concentrate, showing a rich amber liquid. The scene is set in a modern kitchen with cream-colored marble countertops and soft, natural morning light. The overall aesthetic is clean, professional, and inviting, aligning with a luxury coffee brand."
-                                src="https://lh3.googleusercontent.com/aida-public/AB6AXuAHoH2Eu80AabzW7u6QaoSUE-sS-Vmpe_u3tJYRxgmGqndwjOeWxbTXmLznwM98V5rm4MyP7nyi0o2DiSkiwBvgSKvbNW2s8oA_I7BPZT6O-o5W5ynlIP3TilmShdwJ8i8qYXOksFoM-783HU03cKfyNHvbtk2XB5jf8cr1KF1qRJr5-0F6OqoFSw2mkIygL-IttQ3rKNuIbArxGZ4ueZBwV20pZ8eKL-jnZLSBi4ScSlrRXT6ADHPwRma5LlARKf-a_90kFxx95FI"
-                            />
-                        </div>
-                        <div class="flex-grow w-full">
-                            <div class="flex justify-between items-start mb-2">
-                                <div>
-                                    <h3 class="font-headline-md text-headline-md text-primary">Midnight Blend Cold Brew</h3>
-                                    <p class="text-on-surface-variant font-label-md">Concentrate • 32 fl oz</p>
-                                </div>
-                                <button class="text-outline hover:text-error transition-colors p-1" title="Remove Item">
-                                    <span class="material-symbols-outlined" data-icon="delete">delete</span>
-                                </button>
-                            </div>
-                            <div class="flex justify-between items-center mt-4">
-                                <div class="flex items-center bg-surface-container-low rounded-full px-2 border border-outline-variant/30">
-                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
-                                        <span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span>
-                                    </button>
-                                    <span class="px-4 font-bold text-on-surface">2</span>
-                                    <button class="p-2 text-primary hover:text-secondary active:scale-90 transition-transform">
-                                        <span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
-                                    </button>
-                                </div>
-                                <span class="font-headline-md text-headline-md text-secondary">$36.00</span>
-                            </div>
-                        </div>
-                    </div>
+                    <div class="space-y-5" id="cart-container"></div>
+
                     <!-- Empty State Suggestion (Micro-interaction) -->
                     <div class="mt-12 p-8 border-2 border-dashed border-outline-variant/30 rounded-xl flex flex-col items-center text-center">
                         <span class="material-symbols-outlined text-4xl text-outline mb-4" data-icon="auto_awesome">auto_awesome</span>
@@ -221,20 +157,20 @@
                         <h2 class="font-headline-md text-headline-md text-primary mb-6">Order Summary</h2>
                         <div class="space-y-4 mb-8">
                             <div class="flex justify-between items-center">
-                                <span class="text-on-surface-variant font-body-md">Subtotal (3 items)</span>
-                                <span class="font-bold text-on-surface">$60.00</span>
+                                <span class="text-on-surface-variant font-body-md" id="subtotal-text">Subtotal (3 items)</span>
+                                <span class="font-bold text-on-surface" id="subtotal-amount">$60.00</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-on-surface-variant font-body-md">Shipping</span>
-                                <span class="font-bold text-on-surface">$5.50</span>
+                                <span class="font-bold text-on-surface" id="shipping-amount">$5.50</span>
                             </div>
                             <div class="flex justify-between items-center">
                                 <span class="text-on-surface-variant font-body-md">Taxes (Estimated)</span>
-                                <span class="font-bold text-on-surface">$4.80</span>
+                                <span class="font-bold text-on-surface" id="taxes-amount">$4.80</span>
                             </div>
                             <div class="pt-4 border-t border-outline-variant/30 flex justify-between items-center">
                                 <span class="font-headline-md text-primary">Total</span>
-                                <span class="font-headline-md text-secondary">$70.30</span>
+                                <span class="font-headline-md text-secondary" id="total-amount">$70.30</span>
                             </div>
                         </div>
                         <!-- Promo Code -->
@@ -302,5 +238,6 @@
                 });
             });
         </script>
+        <script src="../js/render-cart.js"></script>
     </body>
 </html>

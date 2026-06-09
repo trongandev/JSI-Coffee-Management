@@ -143,7 +143,7 @@
                     <span class="material-symbols-outlined text-[14px]">chevron_right</span>
                     <span>Single Origin</span>
                     <span class="material-symbols-outlined text-[14px]">chevron_right</span>
-                    <span class="text-primary font-bold">Ethiopian Yirgacheffe</span>
+                    <span class="text-primary font-bold" id="name1">Ethiopian Yirgacheffe</span>
                 </div>
             </div>
             <!-- Product Detail Section -->
@@ -153,6 +153,7 @@
                     <img
                         class="w-full h-full object-cover transform hover:scale-105 transition-transform duration-700 ease-out"
                         data-alt="A premium bag of specialty coffee beans with an elegant, minimalist label featuring gold embossed Ethiopian motifs. The bag sits on a textured stone countertop in a sun-drenched, high-end kitchen with warm morning light casting soft shadows. The visual style is artisanal and luxurious, using a palette of warm creams, rich browns, and soft gold accents to evoke a sense of professional craftsmanship and tranquility."
+                        id="image"
                         src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjH-fblhvlX0Tav0cbsF_-NJwhzel9FWGsh4Vc6-_z9OiN5LJ-5TyIqLi16Ih6VeyZFdougU-8txebnZEap40V7ElIrLaM5qvzCSkK84NG4JoNSLu3lxBUW6mACE4wtjtf6YuD_NKapa06PlZbnZHjEvsoDLU1CouNq8vOcKBYaXT9dJbBct7DldZuCas7cL0oYJluCZ_5qumrBmmLcerSnHaC_gJIR-cwYViiFN3_5E2_8W6ABe06h-8JVqxj7xfu_7MJdkiwOmE"
                     />
                     <div class="absolute top-4 left-4 bg-primary text-on-primary px-4 py-1 rounded-full font-label-md text-label-md">Limited Batch</div>
@@ -160,13 +161,13 @@
                 <!-- Detail Content -->
                 <div class="flex flex-col gap-6">
                     <div>
-                        <h1 class="font-display-lg text-display-lg text-primary mb-2">Ethiopian Yirgacheffe</h1>
-                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">
+                        <h1 class="font-display-lg text-display-lg text-primary mb-2" id="name">Ethiopian Yirgacheffe</h1>
+                        <p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl" id="description">
                             A delicate, floral profile with a crisp acidity that captures the essence of the highlands. Hand-sorted and sun-dried for maximum clarity.
                         </p>
                     </div>
                     <div class="flex items-center gap-4 py-2">
-                        <span class="font-headline-lg text-headline-lg text-secondary">$32.00</span>
+                        <span class="font-headline-lg text-headline-lg text-secondary" id="price">32.000đ</span>
                         <div class="h-6 w-[1px] bg-outline-variant"></div>
                         <div class="flex items-center gap-1">
                             <span class="material-symbols-outlined text-[#FFB800]" data-icon="star" data-weight="fill" style="font-variation-settings: &quot;FILL&quot; 1">star</span>
@@ -223,7 +224,9 @@
                                     <span class="material-symbols-outlined text-[18px]">add</span>
                                 </button>
                             </div>
-                            <button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg hover:opacity-90 active:scale-95 transition-all shadow-md">Add to Cart</button>
+                            <button class="flex-1 bg-primary text-on-primary font-label-md text-label-md py-4 rounded-lg hover:opacity-90 active:scale-95 transition-all shadow-md" id="btn-cart">
+                                Add to Cart
+                            </button>
                         </div>
                     </div>
                     <!-- Transparency/Trust -->
@@ -334,5 +337,15 @@
                 }
             }
         </script>
+
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-app.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-auth.js"></script>
+        <script defer src="https://www.gstatic.com/firebasejs/8.10.1/firebase-firestore.js"></script>
+        <!-- Link config -->
+        <script defer src="../firebase.config.js"></script>
+
+        <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
+        <script defer src="../js/render-detail-product.js"></script>
     </body>
 </html>
